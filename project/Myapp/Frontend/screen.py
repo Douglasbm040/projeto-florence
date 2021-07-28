@@ -1,4 +1,6 @@
 import PySimpleGUI as sg
+from backend.apis import watson
+
 class Myapp :
     def __init__(self):
         valor=' '
@@ -19,6 +21,9 @@ class Myapp :
     def clickbutton(self):
         if self.button== 'Enviar':
             print(self.Values[0])
+
+
+watson=watson()
 
 tela=Myapp()
 tela.clickbutton()

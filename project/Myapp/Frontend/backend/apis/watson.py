@@ -12,8 +12,8 @@ class watson():
 
 
  def analisar(self,texto):
-     apikey = open(r'C:\Users\dougl\Documents\GitHub\projeto-florence\project\APP\myapp\apis\credenciais\credencial.txt', 'r')
-     url = open(r'C:\Users\dougl\Documents\GitHub\projeto-florence\project\APP\myapp\apis\credenciais\url.txt', 'r')
+     apikey = open(r'C:\Users\dougl\Documents\GitHub\projeto-florence\project\Myapp\Frontend\backend\apis\credenciais\credencial.txt', 'r')
+     url = open(r'C:\Users\dougl\Documents\GitHub\projeto-florence\project\Myapp\Frontend\backend\apis\credenciais\url.txt', 'r')
      authenticator = IAMAuthenticator(str(apikey.read()))
      natural_language_understanding = NaturalLanguageUnderstandingV1(
         version='2021-03-25',
