@@ -1,5 +1,5 @@
 import PySimpleGUI as sg
-from backend.apis import watson
+from backend.apis.watson import apiWatson
 
 class Myapp :
     def __init__(self):
@@ -20,11 +20,12 @@ class Myapp :
 
     def clickbutton(self):
         if self.button== 'Enviar':
-            print(self.Values[0])
+            return str(self.Values[0],)#'utf-8')
 
 
-watson=watson()
-
+watson=apiWatson()
 tela=Myapp()
-tela.clickbutton()
+tela.iniciar()
+watson.analisar(tela.clickbutton())
+
 

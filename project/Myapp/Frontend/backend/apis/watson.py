@@ -5,10 +5,7 @@ from ibm_watson import NaturalLanguageUnderstandingV1
 from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 from ibm_watson.natural_language_understanding_v1 import Features, ConceptsOptions
 
-#from ..interface.screen import *
-
-
-class watson():
+class apiWatson():
 
 
  def analisar(self,texto):
@@ -21,8 +18,6 @@ class watson():
      natural_language_understanding.set_service_url(str(url.read()))
      response = natural_language_understanding.analyze(
         text='{0}'.format(texto),
-        features=Features(concepts=ConceptsOptions(limit=1))).get_result()
+        features=Features(concepts=ConceptsOptions(limit=10))).get_result()
      print(json.dumps(response, indent=2))   
 
-watson=watson()
-watson.analisar('helo my names is chris !!')
