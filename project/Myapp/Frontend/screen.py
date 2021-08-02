@@ -1,9 +1,10 @@
 import PySimpleGUI as sg
 from backend.apis.watson import apiWatson
+from translate import Translator
 
 class Myapp :
     def __init__(self):
-        valor=' '
+        self.valor=' '
         #layout
         layout=[
         [sg.Text('Descreva a ferida :')],
@@ -20,12 +21,16 @@ class Myapp :
 
     def clickbutton(self):
         if self.button== 'Enviar':
-            return str(self.Values[0],)#'utf-8')
+            return str(self.Values[0],)
 
 
 watson=apiWatson()
 tela=Myapp()
 tela.iniciar()
-watson.analisar(tela.clickbutton())
+#traduzir = Translator(from_lang="Portuguese", to_lang="English")
+#traducao = traduzir.translate("Amo programar")
+json=watson.analisar(tela.clickbutton())
+
+
 
 
