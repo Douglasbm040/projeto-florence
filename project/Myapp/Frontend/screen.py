@@ -10,7 +10,7 @@ class Myapp :
         [sg.Text('Descreva a ferida :')],
         [sg.Multiline (size=(150,15))],
         [sg.Button('Enviar',)],
-        [sg.Text(text=valor)]
+        [sg.Text(text=self.valor)]
         ]
         #janela
         janela=sg.Window('Florence',size=(700,500)).layout(layout)
